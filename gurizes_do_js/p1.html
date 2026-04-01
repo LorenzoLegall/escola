@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>prática 1</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                text-align:center;
+                padding-top:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="textopai">Meu nome é Texto.</h1>
+        <p id="textofilho">O nome do meu pai é Texto.</p><br><br>
+        <button onclick="morte()">Talvez eu mate o Texto...</button>
+        <button onclick="renascimento()">Talvez eu renasça o Texto...</button>
+        <br><br><br>
+        <button onclick="corzinha1()">Talvez eu mude a cor da Página...</button><br><br>
+        <button onclick="corzinha2()">Talvez eu mude a cor da Página...</button><br><br>
+        <button onclick="corzinha3()">Talvez eu mude a cor da Página...</button><br><br>
+        <button onclick="corzinha4()">Talvez eu mude a cor da Página...</button>
+    </body>
+    <script>
+        function morte(){
+            document.getElementById("textopai").innerHTML = "Texto agora está morto.";
+            document.getElementById("textofilho").innerHTML = "PAPAAAI NÃOOOOOOOO";
+        }
+        function renascimento(){
+            document.getElementById("textopai").innerHTML = "Texto renasceu.";
+            document.getElementById("textofilho").innerHTML = "PAPAAAI OOOOOOOO";
+        }
+
+        function corzinha1(){
+            document.body.style.backgroundColor = "#26547C";
+            document.body.style.color = "#FFFFFF";
+        }
+        function corzinha2(){
+            document.body.style.backgroundColor = "#EF476F";
+            document.body.style.color = "#FFFFFF";
+        }
+        function corzinha3(){
+            document.body.style.backgroundColor = "#FFD166";
+            document.body.style.color = "#000000";
+        }
+        function corzinha4(){
+            document.body.style.backgroundColor = "#06D6A0";
+        }
+
+        alert("Bem-vindo à página do Texto!");
+    </script>
+</html>
