@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temperatura</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f0f0f0;
+                text-align:center;
+                padding-top:250px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="cafe_pele" style="font-size:70px;">Temperatura</h1>
+        <p id="doce_de_leite_mumu_o_da_vaquinha" style="font-size:50px;">gugugaga</p>
+    </body>
+    <script>
+        let temp = Number(prompt("Digite a temperatura em Celsius:"));
+        let temp2 = temp * 9/5 + 32;
+
+        function frio(){
+            document.body.style.backgroundColor = "#B1EDE8";
+            document.body.style.color = "#291528";
+            document.getElementById("cafe_pele").innerText = "Tá assim de temperatura ó: " + temp + "°C" + " ou " + temp2 + "°F";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Tá frio. 🥶";
+        }  
+
+        function agradavel(){
+            document.body.style.backgroundColor = "#388659";
+            document.body.style.color = "#291528";
+            document.getElementById("cafe_pele").innerText = "Tá assim de temperatura ó: " + temp + "°C" + " ou " + temp2 + "°F";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Tá tranquilo. 😝";
+        } 
+
+        function quente(){
+            document.body.style.backgroundColor = "#FF6B6B";
+            document.body.style.color = "#291528";
+            document.getElementById("cafe_pele").innerText = "Tá assim de temperatura ó: " + temp + "°C" + " ou " + temp2 + "°F";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Tá quente. 🥵🔥🔥🔥";
+        }
+
+        function putz(){
+            document.getElementById("cafe_pele").innerText = "";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Putz...";
+        }
+
+        if(temp < 15){
+            frio(); 
+        } 
+        else if(temp >= 16 && temp <= 26){
+            agradavel();
+        } 
+        else if(temp > 26 && temp <= 50){
+            quente();
+        }
+        else{
+            putz();
+        }
+
+    </script>
+</html>

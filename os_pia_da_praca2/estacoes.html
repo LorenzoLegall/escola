@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temperatura e Estações</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f0f0f0;
+                text-align:center;
+                padding-top:150px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="cafe_pele" style="font-size:70px;">Temperatura OOOOO</h1>
+        <p id="doce_de_leite_mumu_o_da_vaquinha" style="font-size:50px;">gugugaga</p>
+        <h2 id="estacao" style="font-size:50px;">aaaa</h2>
+        <img id="imagem_estacao" src="" style="width:400px; height:300px; margin-top:20px;">
+    </body>
+    <script>
+        let temp = Number(prompt("Digite a temperatura em Celsius:"));
+        let dia = Number(prompt("Insira o dia (1-31):"));
+        let mes = Number(prompt("Insira o mês (1-12):"));
+        let temp2 = temp * 9/5 + 32;
+
+        function frio(){
+            document.body.style.backgroundColor = "#B1EDE8";
+            document.body.style.color = "#291528";
+            document.getElementById("cafe_pele").innerText = "Tá assim de temperatura ó: " + temp + "°C" + " ou " + temp2 + "°F";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Tá frio. 🥶";
+        }  
+
+        function agradavel(){
+            document.body.style.backgroundColor = "#388659";
+            document.body.style.color = "#291528";
+            document.getElementById("cafe_pele").innerText = "Tá assim de temperatura ó: " + temp + "°C" + " ou " + temp2 + "°F";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Tá tranquilo. 😝";
+        } 
+
+        function quente(){
+            document.body.style.backgroundColor = "#FF6B6B";
+            document.body.style.color = "#291528";
+            document.getElementById("cafe_pele").innerText = "Tá assim de temperatura ó: " + temp + "°C" + " ou " + temp2 + "°F";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Tá quente. 🥵🔥🔥🔥";
+        }
+
+        function putz(){
+            document.getElementById("cafe_pele").innerText = "";
+            document.getElementById("doce_de_leite_mumu_o_da_vaquinha").innerText = "Putz...";
+        }
+
+        
+
+        function primavera(){
+            document.getElementById("estacao").innerText = "Tá na primavera. 🌸🌼🌷";
+            document.getElementById("imagem_estacao").src = "primavera.jpg";
+        }
+        function verao(){
+            document.getElementById("estacao").innerText = "Tá no verão. ☀️🏖️🍉";
+            document.getElementById("imagem_estacao").src = "verao.png";
+        }
+        function outono(){
+            document.getElementById("estacao").innerText = "Tá no outono. 🍂🍁🌰";
+            document.getElementById("imagem_estacao").src = "outono.png";
+        }
+        function inverno(){
+            document.getElementById("estacao").innerText = "Tá no inverno. ❄️⛄️🧣";
+            document.getElementById("imagem_estacao").src = "inverno.jpg";
+        }
+
+        if(temp < 15){
+            frio(); 
+        } 
+        else if(temp >= 16 && temp <= 26){
+            agradavel();
+        } 
+        else if(temp > 26 && temp <= 50){
+            quente();
+        }
+        else{
+            putz();
+        }
+
+        if(mes === 9 && dia >= 23 || mes === 10 || mes === 11 || (mes === 12 && dia <= 20)){
+            primavera();
+        }
+        else if(mes === 12 && dia >= 21 || mes === 1 || mes === 2 || (mes === 3 && dia <= 20)){
+            verao();
+        }
+        else if(mes === 3 && dia >= 21 || mes === 4 || mes === 5 || (mes === 6 && dia <= 20)){
+            outono();
+        }
+        else if((mes === 6 && dia >= 21) || (mes === 7) || (mes === 8) || (mes === 9 && dia <= 20)){
+            inverno();
+        }
+        else{
+            document.getElementById("estacao").innerText = "Putz...";
+            document.getElementById("imagem_estacao").src = "";
+        }
+
+    </script>
+</html>
